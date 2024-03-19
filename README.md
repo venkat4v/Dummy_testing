@@ -40,3 +40,13 @@ result = pd.DataFrame(data=[categorical_features, chi2_test]).T
 result.columns = ['Column', 'Hypothesis Result']
 result
 
+
+
+
+plt.subplots(figsize=(14,7))
+sns.countplot(x="continent",hue="case_status", data=df, ec = "black",palette="Accent")
+plt.title("Continent vs Visa Status", weight="bold",fontsize=20, pad=20)
+plt.ylabel("Count", weight="bold", fontsize=12)
+plt.xlabel("Continents", weight="bold", fontsize=16)
+plt.legend(title="Visa Status", fancybox=True)
+plt.show()
